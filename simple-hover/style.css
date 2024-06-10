@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=PT+Sans+Narrow:wght@700&family=Raleway:wght@900&display=swap");
+* {
+  position: relative;
+}
+
+body {
+  color: white;
+  font-family: sans-serif;
+  background-color: #000;
+  margin: 50px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.dot {
+  height: 20px;
+  min-width: 20px;
+  background-color: #333;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.text {
+  color: #777;
+  font-family: Raleway;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 4px;
+  font-size: 40px;
+  white-space: nowrap;
+}

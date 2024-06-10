@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GSAP - Simple Pulse Button</title>
+    <style>
+      body {
+        display: grid;
+        place-items: center;
+        min-height: 100dvh;
+        background-color: #000;
+      }
+
+      .btn-cta {
+        display: inline-block;
+        text-decoration: none;
+        padding: 0.75rem 1rem;
+        background-color: #f397a3;
+        box-shadow: 8px 8px 0 #333;
+        color: #fff;
+        font-weight: bold;
+        font-size: 1.5rem;
+        will-change: transform;
+        scale: 0.8;
+      }
+    </style>
+  </head>
+  <body>
+    <a class="btn-cta" href="https://youtu.be/mBZdHuZCfic?si=TzVSmavGsKmVAGKL">
+      Roses - The Chainsmokers ft. ROZES
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script>
+      const btnCta = document.querySelector(".btn-cta")
+
+      const scaleTween = gsap.to(btnCta, {
+        scale: 1,
+        repeat: 15,
+        yoyo: true,
+        paused: true,
+      })
+
+      btnCta.addEventListener("mouseover", () => {
+        scaleTween.restart()
+      })
+
+      btnCta.addEventListener("mouseleave", () => {
+        scaleTween.pause()
+        gsap.to(btnCta, {
+          scale: 0.8,
+        })
+      })
+    </script>
+  </body>
+</html>
