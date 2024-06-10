@@ -63,7 +63,7 @@ ghosts.forEach((ghost, i, arr) => {
       parseInt(getComputedStyle(document.body).paddingBottom))
 
   const tl = gsap.timeline()
-  mainTl.add(tl)
+  mainTl.add(tl, "<+=0.5")
 
   const firstTween = gsap.to(arr[arr.length - 1 - i], {
     x: xRightTransition,
