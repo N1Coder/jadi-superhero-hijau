@@ -49,7 +49,9 @@ const animateTo = (target, progress) => {
     animation.pause()
     pause.textContent = animation.paused() ? "Play" : "Pause"
 
-    gsap.to(animation, { progress: progress })
+    target === school
+      ? gsap.to(animation, { progress: progress, ease: "bounce", duration: 3 })
+      : gsap.to(animation, { progress: progress })
   })
 }
 
